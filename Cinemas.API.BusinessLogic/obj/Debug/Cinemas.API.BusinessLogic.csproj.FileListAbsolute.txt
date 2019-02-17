@@ -1,0 +1,16 @@
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.BusinessLogic\bin\Debug\Cinemas.API.BusinessLogic.exe.config
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.BusinessLogic\bin\Debug\Cinemas.API.BusinessLogic.exe
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.BusinessLogic\bin\Debug\Cinemas.API.BusinessLogic.pdb
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.BusinessLogic\bin\Debug\Cinemas.API.Common.exe
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.BusinessLogic\bin\Debug\Cinemas.API.Core.exe
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.BusinessLogic\bin\Debug\Cinemas.API.DataAccess.exe
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.BusinessLogic\bin\Debug\EntityFramework.dll
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.BusinessLogic\bin\Debug\Cinemas.API.Common.pdb
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.BusinessLogic\bin\Debug\Cinemas.API.Core.pdb
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.BusinessLogic\bin\Debug\Cinemas.API.DataAccess.pdb
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.BusinessLogic\bin\Debug\EntityFramework.xml
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.BusinessLogic\obj\Debug\Cinemas.API.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.BusinessLogic\obj\Debug\Cinemas.API.BusinessLogic.exe
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.BusinessLogic\obj\Debug\Cinemas.API.BusinessLogic.pdb
