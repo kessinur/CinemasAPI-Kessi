@@ -15,5 +15,9 @@ namespace Cinemas.API.DataAccess.Context
         public DbSet<Province> Provinces { get; set; }
         public DbSet<SubDistrict> SubDistricts { get; set; }
         public DbSet<Village> Villages { get; set; }
+        public DbSet<Theater> Theaters { get; set; }
+        public DbSet<Cinema> Cinemas { get; set; }
+        public DbSet<Restaurant> Restaurants { get; set; }
+        public DbSet<Room> Rooms { get; set; }
     }
 }

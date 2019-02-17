@@ -16,9 +16,9 @@ namespace Cinemas.API.Controllers
     {
         private readonly IVillageService _villageService;
 
-        public VillagesController(IVillageService VillageService)
+        public VillagesController(IVillageService villageService)
         {
-            _villageService = VillageService;
+            _villageService = villageService;
         }
         // GET: api/Villages
         public IEnumerable<Village> Get()

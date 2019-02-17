@@ -77,14 +77,38 @@
     <Compile Include="Migrations\201902170502229_IsAddingVillage.Designer.cs">
       <DependentUpon>201902170502229_IsAddingVillage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902170710302_IsAddingTheater.cs" />
+    <Compile Include="Migrations\201902170710302_IsAddingTheater.Designer.cs">
+      <DependentUpon>201902170710302_IsAddingTheater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902170801456_IsAddingCinema.cs" />
+    <Compile Include="Migrations\201902170801456_IsAddingCinema.Designer.cs">
+      <DependentUpon>201902170801456_IsAddingCinema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902170856373_IsAddingRestaurant.cs" />
+    <Compile Include="Migrations\201902170856373_IsAddingRestaurant.Designer.cs">
+      <DependentUpon>201902170856373_IsAddingRestaurant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902171007521_IsAddingRoom.cs" />
+    <Compile Include="Migrations\201902171007521_IsAddingRoom.Designer.cs">
+      <DependentUpon>201902171007521_IsAddingRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Cinema.cs" />
     <Compile Include="Model\Province.cs" />
     <Compile Include="Model\Regency.cs" />
+    <Compile Include="Model\Restaurant.cs" />
+    <Compile Include="Model\Room.cs" />
     <Compile Include="Model\SubDistrict.cs" />
+    <Compile Include="Model\Theater.cs" />
     <Compile Include="Model\Village.cs" />
+    <Compile Include="Param\CinemaParam.cs" />
     <Compile Include="Param\ProvinceParam.cs" />
     <Compile Include="Param\RegencyParam.cs" />
+    <Compile Include="Param\RestaurantParam.cs" />
+    <Compile Include="Param\RoomParam.cs" />
     <Compile Include="Param\SubDistrictParam.cs" />
+    <Compile Include="Param\TheaterParam.cs" />
     <Compile Include="Param\VillageParam.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,6 +135,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902170502229_IsAddingVillage.resx">
       <DependentUpon>201902170502229_IsAddingVillage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902170710302_IsAddingTheater.resx">
+      <DependentUpon>201902170710302_IsAddingTheater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902170801456_IsAddingCinema.resx">
+      <DependentUpon>201902170801456_IsAddingCinema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902170856373_IsAddingRestaurant.resx">
+      <DependentUpon>201902170856373_IsAddingRestaurant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902171007521_IsAddingRoom.resx">
+      <DependentUpon>201902171007521_IsAddingRoom.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -16,9 +16,9 @@ namespace Cinemas.API.Controllers
     {
         private readonly ISubDistrictService _subdistrictService;
 
-        public SubDistrictsController(ISubDistrictService SubDistrictService)
+        public SubDistrictsController(ISubDistrictService subdistrictService)
         {
-            _subdistrictService = SubDistrictService;
+            _subdistrictService = subdistrictService;
         }
         // GET: api/SubDistricts
         public IEnumerable<SubDistrict> Get()

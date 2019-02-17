@@ -24,12 +24,20 @@ namespace Cinemas.API
             container.RegisterType<IProvinceService, ProvinceService>();
             container.RegisterType<ISubDistrictService, SubDistrictService>();
             container.RegisterType<IVillageService, VillageService>();
+            container.RegisterType<ITheaterService, TheaterService>();
+            container.RegisterType<ICinemaService, CinemaService>();
+            container.RegisterType<IRestaurantService, RestaurantService>();
+            container.RegisterType<IRoomService, RoomService>();
 
             //this is Repository Area
             container.RegisterType<IRegencyRepository, RegencyRepository>();
             container.RegisterType<IProvinceRepository, ProvinceRepository>();
             container.RegisterType<ISubDistrictRepository, SubDistrictRepository>();
             container.RegisterType<IVillageRepository, VillageRepository>();
+            container.RegisterType<ITheaterRepository, TheaterRepository>();
+            container.RegisterType<ICinemaRepository, CinemaRepository>();
+            container.RegisterType<IRestaurantRepository, RestaurantRepository>();
+            container.RegisterType<IRoomRepository, RoomRepository>();
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }

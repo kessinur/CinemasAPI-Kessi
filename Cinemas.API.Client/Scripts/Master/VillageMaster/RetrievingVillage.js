@@ -8,7 +8,6 @@
 });
 
 function LoadIndexVillage() {
-    debugger;
     $.ajax({
         url: 'http://localhost:17940/api/Villages',
         type: 'GET',
