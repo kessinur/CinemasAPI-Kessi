@@ -153,8 +153,14 @@ function validateInsertVillage() {
         allValid = false;
         $('#Name').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Name').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#SubDistricts').val() == 0 || $('#SubDistricts').val() == "0") {
         allValid = false;
+        $('#SubDistricts').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
         $('#SubDistricts').siblings('span.error').css('visibility', 'visible');
     }
 
@@ -169,8 +175,14 @@ function validateEditVillage() {
         allValid = false;
         $('#Name').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Name').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#SubDistricts').val() == 0 || $('#SubDistricts').val() == "0") {
         allValid = false;
+        $('#SubDistricts').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
         $('#SubDistricts').siblings('span.error').css('visibility', 'visible');
     }
 

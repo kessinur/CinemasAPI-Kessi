@@ -179,17 +179,29 @@ function validateInsertCinema() {
         allValid = false;
         $('#Name').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Name').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#Address').val() == "" || $('#Address').val() == " ") {
         allValid = false;
         $('#Address').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#Address').siblings('span.error').css('visibility', 'hidden');
     }
     if ($('#Villages').val() == 0 || $('#Villages').val() == "0") {
         allValid = false;
         $('#Villages').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Villages').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#Theaters').val() == 0 || $('#Theaters').val() == "0") {
         allValid = false;
         $('#Theaters').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#Theaters').siblings('span.error').css('visibility', 'hidden');
     }
 
     if (allValid == true) {
@@ -203,17 +215,29 @@ function validateEditCinema() {
         allValid = false;
         $('#Name').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Name').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#Address').val() == "" || $('#Address').val() == " ") {
         allValid = false;
         $('#Address').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#Address').siblings('span.error').css('visibility', 'hidden');
     }
     if ($('#Villages').val() == 0 || $('#Villages').val() == "0") {
         allValid = false;
         $('#Villages').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Villages').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#Theaters').val() == 0 || $('#Theaters').val() == "0") {
         allValid = false;
         $('#Theaters').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#Theaters').siblings('span.error').css('visibility', 'hidden');
     }
 
     if (allValid == true) {

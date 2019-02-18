@@ -118,6 +118,9 @@ function ValidationSave() {
         isAllValid = false;
         $('#Name').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Name').siblings('span.error').css('visibility', 'hidden');
+    }
     if (isAllValid) {
         Save();
     }
@@ -128,6 +131,9 @@ function ValidationEdit() {
     if ($('#Name').val() == "" || ($('#Name').val() == " ")) {
         isAllValid = false;
         $('#Name').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#Name').siblings('span.error').css('visibility', 'hidden');
     }
     if (isAllValid) {
         Edit();

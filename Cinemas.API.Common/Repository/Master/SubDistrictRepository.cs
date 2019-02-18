@@ -13,7 +13,7 @@ namespace Cinemas.API.Common.Repository.Master
     {
         MyContext myContext = new MyContext();
         SubDistrict subdistrict = new SubDistrict();
-        bool status = true;
+        bool status = false;
         public bool Delete(int? Id)
         {
             var result = 0;

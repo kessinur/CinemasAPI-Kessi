@@ -158,13 +158,22 @@ function validateInsertRoom() {
         allValid = false;
         $('#Name').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Name').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#Seat').val() == "" || $('#Seat').val() == " ") {
         allValid = false;
         $('#Seat').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Seat').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#Cinemas').val() == 0 || $('#Cinemas').val() == "0") {
         allValid = false;
         $('#Cinemas').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#Cinemas').siblings('span.error').css('visibility', 'hidden');
     }
 
     if (allValid == true) {
@@ -178,13 +187,22 @@ function validateEditRoom() {
         allValid = false;
         $('#Name').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Name').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#Seat').val() == "" || $('#Seat').val() == " ") {
         allValid = false;
         $('#Seat').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Seat').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#Cinemas').val() == 0 || $('#Cinemas').val() == "0") {
         allValid = false;
         $('#Cinemas').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#Cinemas').siblings('span.error').css('visibility', 'hidden');
     }
 
     if (allValid == true) {

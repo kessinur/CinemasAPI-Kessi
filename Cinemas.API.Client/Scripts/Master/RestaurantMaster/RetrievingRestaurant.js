@@ -158,13 +158,22 @@ function validateInsertRestaurant() {
         allValid = false;
         $('#Name').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Name').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#Description').val() == "" || $('#Description').val() == " ") {
         allValid = false;
         $('#Description').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Description').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#Cinemas').val() == 0 || $('#Cinemas').val() == "0") {
         allValid = false;
         $('#Cinemas').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#Cinemas').siblings('span.error').css('visibility', 'hidden');
     }
 
     if (allValid == true) {
@@ -178,13 +187,22 @@ function validateEditRestaurant() {
         allValid = false;
         $('#Name').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Name').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#Description').val() == "" || $('#Description').val() == " ") {
         allValid = false;
         $('#Description').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Description').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#Cinemas').val() == 0 || $('#Cinemas').val() == "0") {
         allValid = false;
         $('#Cinemas').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#Cinemas').siblings('span.error').css('visibility', 'hidden');
     }
 
     if (allValid == true) {

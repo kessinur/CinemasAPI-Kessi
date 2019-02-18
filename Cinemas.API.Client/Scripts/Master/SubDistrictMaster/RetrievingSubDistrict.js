@@ -154,9 +154,15 @@ function validateInsertSubDistrict() {
         allValid = false;
         $('#Name').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Name').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#Regencies').val() == 0 || $('#Regencies').val() == "0") {
         allValid = false;
         $('#Regencies').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#Regencies').siblings('span.error').css('visibility', 'hidden');
     }
 
     if (allValid == true) {
@@ -170,9 +176,15 @@ function validateEditSubDistrict() {
         allValid = false;
         $('#Name').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Name').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#Regencies').val() == 0 || $('#Regencies').val() == "0") {
         allValid = false;
         $('#Regencies').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#Regencies').siblings('span.error').css('visibility', 'hidden');
     }
 
     if (allValid == true) {

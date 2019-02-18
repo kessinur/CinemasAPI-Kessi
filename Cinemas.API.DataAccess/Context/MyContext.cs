@@ -19,5 +19,6 @@ namespace Cinemas.API.DataAccess.Context
         public DbSet<Cinema> Cinemas { get; set; }
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<Room> Rooms { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }

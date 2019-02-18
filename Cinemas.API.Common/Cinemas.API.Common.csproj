@@ -55,6 +55,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\ICinemaRepository.cs" />
+    <Compile Include="Repository\IProductRepository.cs" />
     <Compile Include="Repository\IProvinceRepository.cs" />
     <Compile Include="Repository\IRegencyRepository.cs" />
     <Compile Include="Repository\IRestaurantRepository.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Repository\ITheaterRepository.cs" />
     <Compile Include="Repository\IVillageRepository.cs" />
     <Compile Include="Repository\Master\CinemaRepository.cs" />
+    <Compile Include="Repository\Master\ProductRepository.cs" />
     <Compile Include="Repository\Master\ProvinceRepository.cs" />
     <Compile Include="Repository\Master\RegencyRepository.cs" />
     <Compile Include="Repository\Master\RestaurantRepository.cs" />

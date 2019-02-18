@@ -171,6 +171,7 @@
     <Compile Include="Controllers\CinemasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ProvincesController.cs" />
     <Compile Include="Controllers\RegenciesController.cs" />
     <Compile Include="Controllers\RestaurantsController.cs" />
@@ -208,6 +209,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\Master\CinemaMaster\RetrievingCinema.js" />
+    <Content Include="Scripts\Master\ProductMaster\RetrievingProduct.js" />
     <Content Include="Scripts\Master\RestaurantMaster\RetrievingRestaurant.js" />
     <Content Include="Scripts\Master\RoomMaster\RetrievingRoom.js" />
     <Content Include="Scripts\Master\SubDistrictMaster\RetrievingSubDistrict.js" />
@@ -266,6 +268,7 @@
     <Content Include="Views\Cinemas\Index.cshtml" />
     <Content Include="Views\Restaurants\Index.cshtml" />
     <Content Include="Views\Rooms\Index.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

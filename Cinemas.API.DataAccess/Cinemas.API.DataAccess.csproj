@@ -93,8 +93,13 @@
     <Compile Include="Migrations\201902171007521_IsAddingRoom.Designer.cs">
       <DependentUpon>201902171007521_IsAddingRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902180140433_IsAddingProduct.cs" />
+    <Compile Include="Migrations\201902180140433_IsAddingProduct.Designer.cs">
+      <DependentUpon>201902180140433_IsAddingProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Cinema.cs" />
+    <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Province.cs" />
     <Compile Include="Model\Regency.cs" />
     <Compile Include="Model\Restaurant.cs" />
@@ -103,6 +108,7 @@
     <Compile Include="Model\Theater.cs" />
     <Compile Include="Model\Village.cs" />
     <Compile Include="Param\CinemaParam.cs" />
+    <Compile Include="Param\ProductParam.cs" />
     <Compile Include="Param\ProvinceParam.cs" />
     <Compile Include="Param\RegencyParam.cs" />
     <Compile Include="Param\RestaurantParam.cs" />
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902171007521_IsAddingRoom.resx">
       <DependentUpon>201902171007521_IsAddingRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902180140433_IsAddingProduct.resx">
+      <DependentUpon>201902180140433_IsAddingProduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -132,6 +132,9 @@ function validateInsertTheater() {
         allValid = false;
         $('#Name').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Name').siblings('span.error').css('visibility', 'hidden');
+    }
 
     if (allValid == true) {
         Save();
@@ -143,6 +146,9 @@ function validateEditTheater() {
     if ($('#Name').val() == "" || $('#Name').val() == " ") {
         allValid = false;
         $('#Name').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#Name').siblings('span.error').css('visibility', 'hidden');
     }
 
     if (allValid == true) {

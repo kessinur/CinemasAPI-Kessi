@@ -154,9 +154,15 @@ function validateInsertRegency() {
         allValid = false;
         $('#Name').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Name').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#Provinces').val() == 0 || $('#Provinces').val() == "0") {
         allValid = false;
         $('#Provinces').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#Provinces').siblings('span.error').css('visibility', 'hidden');
     }
 
     if (allValid == true) {
@@ -170,8 +176,14 @@ function validateEditRegency() {
         allValid = false;
         $('#Name').siblings('span.error').css('visibility', 'visible');
     }
+    else {
+        $('#Name').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#Provinces').val() == 0 || $('#Provinces').val() == "0") {
         allValid = false;
+        $('#Provinces').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
         $('#Provinces').siblings('span.error').css('visibility', 'visible');
     }
 
