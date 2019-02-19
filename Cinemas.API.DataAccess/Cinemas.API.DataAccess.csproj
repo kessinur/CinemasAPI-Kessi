@@ -97,24 +97,74 @@
     <Compile Include="Migrations\201902180140433_IsAddingProduct.Designer.cs">
       <DependentUpon>201902180140433_IsAddingProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902180409505_IsAddingCategory.cs" />
+    <Compile Include="Migrations\201902180409505_IsAddingCategory.Designer.cs">
+      <DependentUpon>201902180409505_IsAddingCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902180440304_IsAddingReligion.cs" />
+    <Compile Include="Migrations\201902180440304_IsAddingReligion.Designer.cs">
+      <DependentUpon>201902180440304_IsAddingReligion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902180655488_IsAddingUser.cs" />
+    <Compile Include="Migrations\201902180655488_IsAddingUser.Designer.cs">
+      <DependentUpon>201902180655488_IsAddingUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902180726330_IsAddingFilmRoom.cs" />
+    <Compile Include="Migrations\201902180726330_IsAddingFilmRoom.Designer.cs">
+      <DependentUpon>201902180726330_IsAddingFilmRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902190134495_IsAddingReservation.cs" />
+    <Compile Include="Migrations\201902190134495_IsAddingReservation.Designer.cs">
+      <DependentUpon>201902190134495_IsAddingReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902190253263_IsAddingFilm.cs" />
+    <Compile Include="Migrations\201902190253263_IsAddingFilm.Designer.cs">
+      <DependentUpon>201902190253263_IsAddingFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902190348363_IsFixingFilmRoom.cs" />
+    <Compile Include="Migrations\201902190348363_IsFixingFilmRoom.Designer.cs">
+      <DependentUpon>201902190348363_IsFixingFilmRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902190421019_IsAddingAdmin.cs" />
+    <Compile Include="Migrations\201902190421019_IsAddingAdmin.Designer.cs">
+      <DependentUpon>201902190421019_IsAddingAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902190445052_IsChangingDurationFilm.cs" />
+    <Compile Include="Migrations\201902190445052_IsChangingDurationFilm.Designer.cs">
+      <DependentUpon>201902190445052_IsChangingDurationFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Admin.cs" />
+    <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Cinema.cs" />
+    <Compile Include="Model\Film.cs" />
+    <Compile Include="Model\FilmRoom.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Province.cs" />
     <Compile Include="Model\Regency.cs" />
+    <Compile Include="Model\Religion.cs" />
+    <Compile Include="Model\Reservation.cs" />
     <Compile Include="Model\Restaurant.cs" />
     <Compile Include="Model\Room.cs" />
     <Compile Include="Model\SubDistrict.cs" />
     <Compile Include="Model\Theater.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Model\Village.cs" />
+    <Compile Include="Param\AdminParam.cs" />
+    <Compile Include="Param\CategoryParam.cs" />
     <Compile Include="Param\CinemaParam.cs" />
+    <Compile Include="Param\FilmParam.cs" />
+    <Compile Include="Param\FilmRoomParam.cs" />
     <Compile Include="Param\ProductParam.cs" />
     <Compile Include="Param\ProvinceParam.cs" />
     <Compile Include="Param\RegencyParam.cs" />
+    <Compile Include="Param\ReligionParam.cs" />
+    <Compile Include="Param\ReservationParam.cs" />
     <Compile Include="Param\RestaurantParam.cs" />
     <Compile Include="Param\RoomParam.cs" />
     <Compile Include="Param\SubDistrictParam.cs" />
     <Compile Include="Param\TheaterParam.cs" />
+    <Compile Include="Param\UserParam.cs" />
     <Compile Include="Param\VillageParam.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -156,6 +206,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902180140433_IsAddingProduct.resx">
       <DependentUpon>201902180140433_IsAddingProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902180409505_IsAddingCategory.resx">
+      <DependentUpon>201902180409505_IsAddingCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902180440304_IsAddingReligion.resx">
+      <DependentUpon>201902180440304_IsAddingReligion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902180655488_IsAddingUser.resx">
+      <DependentUpon>201902180655488_IsAddingUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902180726330_IsAddingFilmRoom.resx">
+      <DependentUpon>201902180726330_IsAddingFilmRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902190134495_IsAddingReservation.resx">
+      <DependentUpon>201902190134495_IsAddingReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902190253263_IsAddingFilm.resx">
+      <DependentUpon>201902190253263_IsAddingFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902190348363_IsFixingFilmRoom.resx">
+      <DependentUpon>201902190348363_IsFixingFilmRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902190421019_IsAddingAdmin.resx">
+      <DependentUpon>201902190421019_IsAddingAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902190445052_IsChangingDurationFilm.resx">
+      <DependentUpon>201902190445052_IsChangingDurationFilm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

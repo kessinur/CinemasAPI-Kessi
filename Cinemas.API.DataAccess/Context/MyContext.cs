@@ -20,5 +20,12 @@ namespace Cinemas.API.DataAccess.Context
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Religion> Religions { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<FilmRoom> FilmRooms { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Film> Films { get; set; }
+        public DbSet<Admin> Admin { get; set; }
     }
 }

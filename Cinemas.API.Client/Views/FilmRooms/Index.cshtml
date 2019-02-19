@@ -1,0 +1,103 @@
+﻿<div class="container">
+    <hr />
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Create New</button><br /><br />
+    <table class="table table-hover" id="table">
+        <thead>
+            <tr>
+                <th>
+                    No
+                </th>
+                <th>
+                    Show Date
+                </th>
+                <th>
+                    Hour
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Film
+                </th>
+                <th>
+                    Room
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbody"></tbody>
+    </table>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" onclick="clearFilmRoomScreen();">×</button>
+                <h4 class="modal-title" id="myModalLabel">Film Room Form</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="Id">Id</label>
+                        <input type="text" class="form-control" id="Id" placeholder="Id" disabled="disabled" />
+                    </div>
+                    <div class="form-group">
+                        <label for="ShowDate">Show Date</label>
+                        <input type="date" class="form-control" id="ShowDate" placeholder="Show Date" />
+                        <span style="color:red" class="error"> Valid order date required (ex: MM-dd-yyyy) </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Hour">Hour</label>
+                        <input type="text" class="form-control" id="Hour" placeholder="Hour" />
+                        <span style="color:red" class="error"> Valid Synopsis Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Price">Price</label>
+                        <input type="number" class="form-control" id="Price" placeholder="Price" />
+                        <span style="color:red" class="error"> Valid Duration Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Film Title</label>
+                        <select id="Films" data-placement="Choose" class="form-control">
+                            <option>Choose Film</option>
+                        </select>
+                        <span style="color:red" class="error"> Valid Film Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Room Name</label>
+                        <select id="Rooms" data-placement="Choose" class="form-control">
+                            <option>Choose Room</option>
+                        </select>
+                        <span style="color:red" class="error"> Valid Room Required</span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="Save" onclick="validateInsertFilmRoom();">Add</button>
+                <button type="button" class="btn btn-primary" id="Update" style="display:none;" onclick="validateEditFilmRoom();">Update</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearFilmRoomScreen();">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/Scripts/Sweetalert/sweetalert.min.js"></script>
+    <link href="~/Scripts/Sweetalert/sweetalert.css" rel="stylesheet" />
+    <script src="~/Scripts/Datatables/jquery.dataTables.min.js"></script>
+    <link href="~/Scripts/Datatables/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="~/Scripts/Master/FilmRoomMaster/RetrievingFilmRoom.js"></script>
+    <script type="text/javascript">
+        (function () {
+            ('#ShowDate').datepicker({
+            dateFormat: 'mm-dd-yy'
+            })
+        })
+    </script>
+
+
+    @Scripts.Render("~/bundles/jqueryval")
+}

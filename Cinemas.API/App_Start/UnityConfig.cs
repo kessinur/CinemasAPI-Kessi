@@ -29,6 +29,13 @@ namespace Cinemas.API
             container.RegisterType<IRestaurantService, RestaurantService>();
             container.RegisterType<IRoomService, RoomService>();
             container.RegisterType<IProductService, ProductService>();
+            container.RegisterType<ICategoryService, CategoryService>();
+            container.RegisterType<IReligionService, ReligionService>();
+            container.RegisterType<IUserService, UserService>();
+            container.RegisterType<IReservationService, ReservationService>();
+            container.RegisterType<IFilmService, FilmService>();
+            container.RegisterType<IFilmRoomService, FilmRoomService>();
+            container.RegisterType<IAdminService, AdminService>();
 
             //this is Repository Area
             container.RegisterType<IRegencyRepository, RegencyRepository>();
@@ -40,6 +47,13 @@ namespace Cinemas.API
             container.RegisterType<IRestaurantRepository, RestaurantRepository>();
             container.RegisterType<IRoomRepository, RoomRepository>();
             container.RegisterType<IProductRepository, ProductRepository>();
+            container.RegisterType<ICategoryRepository, CategoryRepository>();
+            container.RegisterType<IReligionRepository, ReligionRepository>();
+            container.RegisterType<IUserRepository, UserRepository>();
+            container.RegisterType<IReservationRepository, ReservationRepository>();
+            container.RegisterType<IFilmRepository, FilmRepository>();
+            container.RegisterType<IFilmRoomRepository, FilmRoomRepository>();
+            container.RegisterType<IAdminRepository, AdminRepository>();
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }

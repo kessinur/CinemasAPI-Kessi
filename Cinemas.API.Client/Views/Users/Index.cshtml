@@ -1,0 +1,142 @@
+﻿
+<div class="container">
+    <hr />
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="">Create New</button><br /><br />
+    <table class="table table-hover" id="table">
+        <thead>
+            <tr>
+                <th>
+                    No.
+                </th>
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+                <th>
+                    Gender
+                </th>
+                <th>
+                    Phone
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Amount
+                </th>
+                <th>
+                    Username
+                </th>
+                <th>
+                    Password
+                </th>
+                <th>
+                    Address
+                </th>
+                <th>
+                    Religion Name
+                </th>
+                <th>
+                    Village Name
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbody"></tbody>
+    </table>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="myModalLabel">User Form</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="Id">Id</label>
+                        <input type="text" class="form-control" id="Id" placeholder="Id" disabled="disabled" />
+                    </div>
+                    <div class="form-group">
+                        <label for="FirstName">First Name</label>
+                        <input type="text" class="form-control" id="FirstName" placeholder="FirstName" />
+                        <span class="error">Valid First Name Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="LastName">Last Name</label>
+                        <input type="text" class="form-control" id="LastName" placeholder="LastName" />
+                        <span class="error">Valid Last Name Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Gender">Gender</label>
+                        <select id="Gender" data-placement="Choose" class="form-control">
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                        <span class="error">Valid Gender Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Phone">Phone</label>
+                        <input type="text" class="form-control" id="Phone" placeholder="Phone" />
+                        <span class="error">Valid Phone Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="text" class="form-control" id="Email" placeholder="Email" />
+                        <span class="error">Valid Email Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Amount">Amount</label>
+                        <input type="number" class="form-control" id="Amount" placeholder="Amount" />
+                        <span class="error">Valid Amount Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Username">Username</label>
+                        <input type="text" class="form-control" id="Username" placeholder="Username" />
+                        <span class="error">Valid Username Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">Password</label>
+                        <input type="text" class="form-control" id="Password" placeholder="Password" />
+                        <span class="error">Valid Password Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Address">Address</label>
+                        <input type="text" class="form-control" id="Address" placeholder="Address" />
+                        <span class="error">Valid Address Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Religions">Religion Name</label>
+                        <select id="Religions" data-placement="Choose" class="form-control"></select>
+                        <span class="error">Valid Religion Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Villages">Village Name</label>
+                        <select id="Villages" data-placement="Choose" class="form-control"></select>
+                        <span class="error">Valid Village Required</span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="Save" onclick="validateInsertUser();">Add</button>
+                <button type="button" class="btn btn-primary" id="Update" style="display:none;" onclick="validateEditUser();">Update</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearUserScreen();">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/Scripts/Sweetalert/sweetalert.min.js"></script>
+    <link href="~/Scripts/Sweetalert/sweetalert.css" rel="stylesheet" />
+    <script src="~/Scripts/Datatables/jquery.dataTables.min.js"></script>
+    <link href="~/Scripts/Datatables/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="~/Scripts/Master/UserMaster/RetrievingUser.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

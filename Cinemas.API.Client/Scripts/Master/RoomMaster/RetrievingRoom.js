@@ -161,7 +161,7 @@ function validateInsertRoom() {
     else {
         $('#Name').siblings('span.error').css('visibility', 'hidden');
     }
-    if ($('#Seat').val() == "" || $('#Seat').val() == " ") {
+    if ($('#Seat').val() == "" || $('#Seat').val() == " " || $('#Seat').val() < 0) {
         allValid = false;
         $('#Seat').siblings('span.error').css('visibility', 'visible');
     }
@@ -190,7 +190,7 @@ function validateEditRoom() {
     else {
         $('#Name').siblings('span.error').css('visibility', 'hidden');
     }
-    if ($('#Seat').val() == "" || $('#Seat').val() == " ") {
+    if ($('#Seat').val() == "" || $('#Seat').val() == " " || $('#Seat').val() < 0) {
         allValid = false;
         $('#Seat').siblings('span.error').css('visibility', 'visible');
     }

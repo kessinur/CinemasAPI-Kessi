@@ -1,0 +1,122 @@
+﻿
+<div class="container">
+    <hr />
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="">Create New</button><br /><br />
+    <table class="table table-hover" id="table">
+        <thead>
+            <tr>
+                <th>
+                    No.
+                </th>
+                <th>
+                    Title
+                </th>
+                <th>
+                    Rating
+                </th>
+                <th>
+                    Poster
+                </th>
+                <th>
+                    Synopsis
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Duration
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    Category Name
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbody"></tbody>
+    </table>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="myModalLabel">Film Form</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="Id">Id</label>
+                        <input type="text" class="form-control" id="Id" placeholder="Id" disabled="disabled" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Title">Title</label>
+                        <input type="text" class="form-control" id="Title" placeholder="Title" />
+                        <span style="color:red" class="error"> Valid Title Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Rating">Rating</label>
+                        <select id="Rating" data-placement="Choose" class="form-control">
+                            <option>G/General</option>
+                            <option>PG/Parental Guidance Suggested</option>
+                            <option>PG-13/Parents Strongly Cautioned</option>
+                            <option>NC-17/No One 17 and Under Admitted</option>
+                            <option>R/Restricted</option>
+                        </select>
+                        <span style="color:red" class="error"> Valid Rating Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Synopsis">Synopsis</label>
+                        <textarea class="form-control" id="Synopsis" placeholder="Insert Synopsis Here......"></textarea>
+                        <span style="color:red" class="error"> Valid Synopsis Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Description">Description</label>
+                        <textarea class="form-control" id="Description" placeholder="Insert Description Here...."></textarea>
+                        <span style="color:red" class="error"> Valid Description Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Duration">Duration</label>
+                        <input type="number" class="form-control" id="Duration" placeholder="Duration" />
+                        <span style="color:red" class="error"> Valid Duration Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Status">Status</label>
+                        <select id="Status" data-placement="Choose" class="form-control">
+                            <option>Comming Soon</option>
+                            <option>Airing</option>
+                            <option>Aired</option>
+                        </select>
+                        <span style="color:red" class="error"> Valid Status Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Categories">Category Name</label>
+                        <select id="Categories" data-placement="Choose" class="form-control">
+                            <option>Choose Category</option>
+                        </select>
+                        <span style="color:red" class="error"> Valid Category Required</span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="Save" onclick="validateInsertFilm();">Add</button>
+                <button type="button" class="btn btn-primary" id="Update" style="display:none;" onclick="validateEditFilm();">Update</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearFilmScreen();">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/Scripts/Sweetalert/sweetalert.min.js"></script>
+    <link href="~/Scripts/Sweetalert/sweetalert.css" rel="stylesheet" />
+    <script src="~/Scripts/Datatables/jquery.dataTables.min.js"></script>
+    <link href="~/Scripts/Datatables/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="~/Scripts/Master/FilmMaster/RetrievingFilm.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

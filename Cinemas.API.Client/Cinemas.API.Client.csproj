@@ -168,16 +168,22 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminsController.cs" />
+    <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\CinemasController.cs" />
+    <Compile Include="Controllers\FilmRoomsController.cs" />
+    <Compile Include="Controllers\FilmsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ProvincesController.cs" />
     <Compile Include="Controllers\RegenciesController.cs" />
+    <Compile Include="Controllers\ReligionsController.cs" />
     <Compile Include="Controllers\RestaurantsController.cs" />
     <Compile Include="Controllers\RoomsController.cs" />
     <Compile Include="Controllers\SubDistrictsController.cs" />
     <Compile Include="Controllers\TheatersController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\VillagesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -208,12 +214,18 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Master\AdminMaster\RetrievingAdmin.js" />
+    <Content Include="Scripts\Master\CategoryMaster\RetrievingCategory.js" />
     <Content Include="Scripts\Master\CinemaMaster\RetrievingCinema.js" />
+    <Content Include="Scripts\Master\FilmMaster\RetrievingFilm.js" />
+    <Content Include="Scripts\Master\FilmRoomMaster\RetrievingFilmRoom.js" />
     <Content Include="Scripts\Master\ProductMaster\RetrievingProduct.js" />
+    <Content Include="Scripts\Master\ReligionMaster\RetrievingReligion.js" />
     <Content Include="Scripts\Master\RestaurantMaster\RetrievingRestaurant.js" />
     <Content Include="Scripts\Master\RoomMaster\RetrievingRoom.js" />
     <Content Include="Scripts\Master\SubDistrictMaster\RetrievingSubDistrict.js" />
     <Content Include="Scripts\Master\TheaterMaster\RetrievingTheater.js" />
+    <Content Include="Scripts\Master\UserMaster\RetrievingUser.js" />
     <Content Include="Scripts\Master\VillageMaster\RetrievingVillage.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\Master\ProvinceMaster\RetrievingProvince.js" />
@@ -269,6 +281,12 @@
     <Content Include="Views\Restaurants\Index.cshtml" />
     <Content Include="Views\Rooms\Index.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Categories\Index.cshtml" />
+    <Content Include="Views\Religions\Index.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Films\Index.cshtml" />
+    <Content Include="Views\FilmRooms\Index.cshtml" />
+    <Content Include="Views\Admins\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
