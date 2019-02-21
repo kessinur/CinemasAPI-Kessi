@@ -133,17 +133,55 @@
     <Compile Include="Migrations\201902190445052_IsChangingDurationFilm.Designer.cs">
       <DependentUpon>201902190445052_IsChangingDurationFilm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902200133250_IsAddingSecretUser.cs" />
+    <Compile Include="Migrations\201902200133250_IsAddingSecretUser.Designer.cs">
+      <DependentUpon>201902200133250_IsAddingSecretUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902200254314_IsAddingOrderProduct.cs" />
+    <Compile Include="Migrations\201902200254314_IsAddingOrderProduct.Designer.cs">
+      <DependentUpon>201902200254314_IsAddingOrderProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902200301429_IsAddingBuyTicket.cs" />
+    <Compile Include="Migrations\201902200301429_IsAddingBuyTicket.Designer.cs">
+      <DependentUpon>201902200301429_IsAddingBuyTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902200407361_IsFixingReservation.cs" />
+    <Compile Include="Migrations\201902200407361_IsFixingReservation.Designer.cs">
+      <DependentUpon>201902200407361_IsFixingReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902200409099_IsFixingOrderFood.cs" />
+    <Compile Include="Migrations\201902200409099_IsFixingOrderFood.Designer.cs">
+      <DependentUpon>201902200409099_IsFixingOrderFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902200418143_IsFixingBuyTicket.cs" />
+    <Compile Include="Migrations\201902200418143_IsFixingBuyTicket.Designer.cs">
+      <DependentUpon>201902200418143_IsFixingBuyTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902200649165_IsFixingOrderProduct.cs" />
+    <Compile Include="Migrations\201902200649165_IsFixingOrderProduct.Designer.cs">
+      <DependentUpon>201902200649165_IsFixingOrderProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902200651243_IsFixingOrderProduct1.cs" />
+    <Compile Include="Migrations\201902200651243_IsFixingOrderProduct1.Designer.cs">
+      <DependentUpon>201902200651243_IsFixingOrderProduct1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902200652308_IsFixingOrderProduct2.cs" />
+    <Compile Include="Migrations\201902200652308_IsFixingOrderProduct2.Designer.cs">
+      <DependentUpon>201902200652308_IsFixingOrderProduct2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Cinema.cs" />
     <Compile Include="Model\Film.cs" />
     <Compile Include="Model\FilmRoom.cs" />
+    <Compile Include="Model\Transactions\BuyTicket.cs" />
+    <Compile Include="Model\Transactions\OrderProduct.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Province.cs" />
     <Compile Include="Model\Regency.cs" />
     <Compile Include="Model\Religion.cs" />
-    <Compile Include="Model\Reservation.cs" />
+    <Compile Include="Model\TransactionMaster\Reservation.cs" />
     <Compile Include="Model\Restaurant.cs" />
     <Compile Include="Model\Room.cs" />
     <Compile Include="Model\SubDistrict.cs" />
@@ -155,11 +193,13 @@
     <Compile Include="Param\CinemaParam.cs" />
     <Compile Include="Param\FilmParam.cs" />
     <Compile Include="Param\FilmRoomParam.cs" />
+    <Compile Include="Param\Transactions\BuyTicketParam.cs" />
+    <Compile Include="Param\Transactions\OrderProductParam.cs" />
     <Compile Include="Param\ProductParam.cs" />
     <Compile Include="Param\ProvinceParam.cs" />
     <Compile Include="Param\RegencyParam.cs" />
     <Compile Include="Param\ReligionParam.cs" />
-    <Compile Include="Param\ReservationParam.cs" />
+    <Compile Include="Param\TransactionMaster\ReservationParam.cs" />
     <Compile Include="Param\RestaurantParam.cs" />
     <Compile Include="Param\RoomParam.cs" />
     <Compile Include="Param\SubDistrictParam.cs" />
@@ -233,6 +273,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902190445052_IsChangingDurationFilm.resx">
       <DependentUpon>201902190445052_IsChangingDurationFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902200133250_IsAddingSecretUser.resx">
+      <DependentUpon>201902200133250_IsAddingSecretUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902200254314_IsAddingOrderProduct.resx">
+      <DependentUpon>201902200254314_IsAddingOrderProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902200301429_IsAddingBuyTicket.resx">
+      <DependentUpon>201902200301429_IsAddingBuyTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902200407361_IsFixingReservation.resx">
+      <DependentUpon>201902200407361_IsFixingReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902200409099_IsFixingOrderFood.resx">
+      <DependentUpon>201902200409099_IsFixingOrderFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902200418143_IsFixingBuyTicket.resx">
+      <DependentUpon>201902200418143_IsFixingBuyTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902200649165_IsFixingOrderProduct.resx">
+      <DependentUpon>201902200649165_IsFixingOrderProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902200651243_IsFixingOrderProduct1.resx">
+      <DependentUpon>201902200651243_IsFixingOrderProduct1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902200652308_IsFixingOrderProduct2.resx">
+      <DependentUpon>201902200652308_IsFixingOrderProduct2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

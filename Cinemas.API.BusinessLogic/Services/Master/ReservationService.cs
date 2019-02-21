@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Cinemas.API.DataAccess.Model;
 using Cinemas.API.DataAccess.Param;
 using Cinemas.API.Common.Repository;
+using Cinemas.API.DataAccess.Model.TransactionMaster;
+using Cinemas.API.DataAccess.Param.TransactionMaster;
 
 namespace Cinemas.API.BusinessLogic.Services.Master
 {
@@ -42,12 +44,6 @@ namespace Cinemas.API.BusinessLogic.Services.Master
         public bool Insert(ReservationParam reservationParam)
         {
             _reservationRepository.Insert(reservationParam);
-            return status = true;
-        }
-
-        public bool Update(int? Id, ReservationParam reservationParam)
-        {
-            _reservationRepository.Update(Id, reservationParam);
             return status = true;
         }
     }

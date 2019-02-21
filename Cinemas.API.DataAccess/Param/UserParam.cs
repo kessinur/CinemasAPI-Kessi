@@ -17,6 +17,8 @@ namespace Cinemas.API.DataAccess.Param
         public string Username { get; set; }
         public string Password { get; set; }
         public string Address { get; set; }
+        public string SecretQuestion { get; set; }
+        public string SecretAnswer { get; set; }
         public int Villages_Id { get; set; }
         public int Religions_Id { get; set; }
     }

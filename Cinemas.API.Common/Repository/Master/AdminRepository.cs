@@ -60,6 +60,11 @@ namespace Cinemas.API.Common.Repository.Master
             }
         }
 
+        public Admin Login(string username, string password)
+        {
+            return myContext.Admin.Where(x => (x.IsDelete == false) && (x.Username == username) && (x.Password == password)).SingleOrDefault();
+        }
+
         public bool Update(int? Id, AdminParam adminParam)
         {
             var result = 0;

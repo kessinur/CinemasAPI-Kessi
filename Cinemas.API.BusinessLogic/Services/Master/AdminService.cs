@@ -88,5 +88,10 @@ namespace Cinemas.API.BusinessLogic.Services.Master
             }
             return status;
         }
+
+        public Admin Login(string username, string password)
+        {
+            return _adminRepository.Login(username, password);
+        }
     }
 }

@@ -49,5 +49,10 @@ namespace Cinemas.API.Controllers
         {
             _subdistrictService.Delete(id);
         }
+
+        public IEnumerable<SubDistrict> GetSubDistrict(int RId)
+        {
+            return _subdistrictService.GetSubDistrict(RId);
+        }
     }
 }

@@ -49,5 +49,10 @@ namespace Cinemas.API.Controllers
         {
             _adminService.Delete(id);
         }
+
+        public Admin Login(string Username, string Password)
+        {
+            return _adminService.Login(Username, Password);
+        }
     }
 }

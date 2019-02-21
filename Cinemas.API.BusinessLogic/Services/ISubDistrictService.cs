@@ -15,5 +15,7 @@ namespace Cinemas.API.BusinessLogic.Services
         bool Delete(int? Id);
         List<SubDistrict> Get();
         SubDistrict Get(int? Id);
+
+        List<SubDistrict> GetSubDistrict(int? Id);
     }
 }

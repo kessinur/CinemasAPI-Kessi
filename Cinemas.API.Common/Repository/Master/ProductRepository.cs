@@ -41,6 +41,16 @@ namespace Cinemas.API.Common.Repository.Master
             return getProduct;
         }
 
+        public List<Product> GetProduct(int? Id)
+        {
+            return myContext.Products.Where(x => x.Restaurants.Cinemas.Id == Id && x.IsDelete == false).ToList();
+        }
+
+        public List<Product> GetProductByRestaurant(int? Id)
+        {
+            return myContext.Products.Where(x => x.Restaurants.Id == Id && x.IsDelete == false).ToList();
+        }
+
         public bool Insert(ProductParam productParam)
         {
             var result = 0;

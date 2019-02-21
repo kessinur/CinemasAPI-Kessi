@@ -31,3 +31,12 @@ C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.Da
 C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.DataAccess\obj\Debug\Cinemas.API.DataAccess.Migrations.IsFixingFilmRoom.resources
 C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.DataAccess\obj\Debug\Cinemas.API.DataAccess.Migrations.IsAddingAdmin.resources
 C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.DataAccess\obj\Debug\Cinemas.API.DataAccess.Migrations.IsChangingDurationFilm.resources
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.DataAccess\obj\Debug\Cinemas.API.DataAccess.Migrations.IsAddingSecretUser.resources
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.DataAccess\obj\Debug\Cinemas.API.DataAccess.Migrations.IsAddingOrderProduct.resources
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.DataAccess\obj\Debug\Cinemas.API.DataAccess.Migrations.IsAddingBuyTicket.resources
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.DataAccess\obj\Debug\Cinemas.API.DataAccess.Migrations.IsFixingReservation.resources
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.DataAccess\obj\Debug\Cinemas.API.DataAccess.Migrations.IsFixingOrderFood.resources
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.DataAccess\obj\Debug\Cinemas.API.DataAccess.Migrations.IsFixingBuyTicket.resources
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.DataAccess\obj\Debug\Cinemas.API.DataAccess.Migrations.IsFixingOrderProduct.resources
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.DataAccess\obj\Debug\Cinemas.API.DataAccess.Migrations.IsFixingOrderProduct1.resources
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.DataAccess\obj\Debug\Cinemas.API.DataAccess.Migrations.IsFixingOrderProduct2.resources

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Cinemas.API.DataAccess.Model;
 using Cinemas.API.DataAccess.Param;
 using Cinemas.API.DataAccess.Context;
+using Cinemas.API.DataAccess.Model.TransactionMaster;
+using Cinemas.API.DataAccess.Param.TransactionMaster;
 
 namespace Cinemas.API.Common.Repository.Master
 {
@@ -44,29 +46,15 @@ namespace Cinemas.API.Common.Repository.Master
         public bool Insert(ReservationParam reservationParam)
         {
             var result = 0;
-            reservation.ReservationDate = reservationParam.ReservationDate;
+            reservation.ReservationDate = DateTimeOffset.Now.LocalDateTime;
             reservation.TotalPrice = reservationParam.TotalPrice;
+            reservation.Users = myContext.Users.Find(reservationParam.Users_Id);
             reservation.CreateDate = DateTimeOffset.Now.LocalDateTime;
             reservation.IsDelete = false;
             myContext.Reservations.Add(reservation);
             result = myContext.SaveChanges();
 
             if (result > 0)
-            {
-                status = true;
-            }
-            return status;
-        }
-
-        public bool Update(int? Id, ReservationParam reservationParam)
-        {
-            var result = 0;
-            Reservation getReservation = Get(Id);
-            getReservation.ReservationDate = reservationParam.ReservationDate;
-            getReservation.TotalPrice = reservationParam.TotalPrice;
-            getReservation.UpdateDate = DateTimeOffset.Now.LocalDateTime;
-            result = myContext.SaveChanges();
-            if(result > 0)
             {
                 status = true;
             }

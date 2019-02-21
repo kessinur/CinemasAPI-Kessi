@@ -49,5 +49,10 @@ namespace Cinemas.API.Controllers
         {
             _regencyService.Delete(id);
         }
+
+        public IEnumerable<Regency> GetRegency(int RId)
+        {
+            return _regencyService.GetRegency(RId);
+        }
     }
 }

@@ -50,5 +50,15 @@ namespace Cinemas.API.BusinessLogic.Services.Master
             _productRepository.Update(Id, productParam);
             return status = true;
         }
+
+        public List<Product> GetProduct(int? Id)
+        {
+            return _productRepository.GetProduct(Id);
+        }
+
+        public List<Product> GetProductByRestaurant(int? Id)
+        {
+            return _productRepository.GetProductByRestaurant(Id);
+        }
     }
 }

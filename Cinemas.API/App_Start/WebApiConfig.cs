@@ -27,6 +27,12 @@ namespace Cinemas.API
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Routes.MapHttpRoute(
+                name: "ActionApi",
+                routeTemplate: "api/{controller}/{action}/{RId}",
+                defaults: new { RId = RouteParameter.Optional }
+            );
         }
     }
 }

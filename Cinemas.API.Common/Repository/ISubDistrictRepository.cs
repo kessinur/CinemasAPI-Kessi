@@ -15,5 +15,6 @@ namespace Cinemas.API.Common.Repository
         bool Delete(int? Id);
         List<SubDistrict> Get();
         SubDistrict Get(int? Id);
+        List<SubDistrict> GetSubDistrict(int? Id);
     }
 }

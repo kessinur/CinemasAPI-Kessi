@@ -55,10 +55,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IAdminService.cs" />
+    <Compile Include="Services\IBuyTicketService.cs" />
     <Compile Include="Services\ICategoryService.cs" />
     <Compile Include="Services\ICinemaService.cs" />
     <Compile Include="Services\IFilmRoomService.cs" />
     <Compile Include="Services\IFilmService.cs" />
+    <Compile Include="Services\IOrderProductService.cs" />
     <Compile Include="Services\IProductService.cs" />
     <Compile Include="Services\IProvinceService.cs" />
     <Compile Include="Services\IRegencyService.cs" />
@@ -71,10 +73,12 @@
     <Compile Include="Services\IUserService.cs" />
     <Compile Include="Services\IVillageService.cs" />
     <Compile Include="Services\Master\AdminService.cs" />
+    <Compile Include="Services\Master\BuyTicketService.cs" />
     <Compile Include="Services\Master\CategoryService.cs" />
     <Compile Include="Services\Master\CinemaService.cs" />
     <Compile Include="Services\Master\FilmRoomService.cs" />
     <Compile Include="Services\Master\FilmService.cs" />
+    <Compile Include="Services\Master\OrderProductService.cs" />
     <Compile Include="Services\Master\ProductService.cs" />
     <Compile Include="Services\Master\ProvinceService.cs" />
     <Compile Include="Services\Master\RegencyService.cs" />

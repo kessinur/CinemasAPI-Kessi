@@ -73,5 +73,10 @@ namespace Cinemas.API.Common.Repository.Master
             }
             return status;
         }
+
+        public List<Village> GetVillage(int? Id)
+        {
+            return myContext.Villages.Where(x => x.SubDistricts.Id == Id && x.IsDelete == false).ToList();
+        }
     }
 }

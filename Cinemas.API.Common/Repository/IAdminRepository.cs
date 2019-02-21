@@ -15,5 +15,7 @@ namespace Cinemas.API.Common.Repository
         bool Delete(int? Id);
         List<Admin> Get();
         Admin Get(int? Id);
+
+        Admin Login(string username, string password);
     }
 }

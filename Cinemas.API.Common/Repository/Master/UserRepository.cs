@@ -55,6 +55,8 @@ namespace Cinemas.API.Common.Repository.Master
             user.Username = userParam.Username;
             user.Password = userParam.Password;
             user.Address = userParam.Address;
+            user.SecretQuestion = userParam.SecretQuestion;
+            user.SecretAnswer = userParam.SecretAnswer;
             user.Religions = myContext.Religions.Find(userParam.Religions_Id);
             user.Villages = myContext.Villages.Find(userParam.Villages_Id);
             user.CreateDate = DateTimeOffset.Now.LocalDateTime;
@@ -82,6 +84,8 @@ namespace Cinemas.API.Common.Repository.Master
             getUser.Username = userParam.Username;
             getUser.Password = userParam.Password;
             getUser.Address = userParam.Address;
+            getUser.SecretQuestion = userParam.SecretQuestion;
+            getUser.SecretAnswer = userParam.SecretAnswer;
             getUser.Religions = myContext.Religions.Find(userParam.Religions_Id);
             getUser.Villages = myContext.Villages.Find(userParam.Villages_Id);
             getUser.UpdateDate = DateTimeOffset.Now.LocalDateTime;

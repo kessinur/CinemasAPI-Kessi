@@ -1,6 +1,8 @@
 ﻿using Cinemas.API.BusinessLogic.Services;
 using Cinemas.API.DataAccess.Model;
+using Cinemas.API.DataAccess.Model.TransactionMaster;
 using Cinemas.API.DataAccess.Param;
+using Cinemas.API.DataAccess.Param.TransactionMaster;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,10 +41,6 @@ namespace Cinemas.API.Controllers
         }
 
         // PUT: api/Reservations/5
-        public void Put(int id, ReservationParam reservationParam)
-        {
-            _reservationService.Update(id, reservationParam);
-        }
 
         // DELETE: api/Reservations/5
         public void Delete(int id)

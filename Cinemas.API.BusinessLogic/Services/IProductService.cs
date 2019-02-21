@@ -15,5 +15,8 @@ namespace Cinemas.API.BusinessLogic.Services
         bool Delete(int? Id);
         List<Product> Get();
         Product Get(int? Id);
+        List<Product> GetProduct(int? Id);
+
+        List<Product> GetProductByRestaurant(int? Id);
     }
 }

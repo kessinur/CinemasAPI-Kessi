@@ -7,3 +7,4 @@ C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.Co
 C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.Core\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.Core\obj\Debug\Cinemas.API.Core.exe
 C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.Core\obj\Debug\Cinemas.API.Core.pdb
+C:\Users\Walker\Documents\Visual Studio 2015\Projects\Cinemas.API\Cinemas.API.Core\obj\Debug\Cinemas.API.Core.csprojResolveAssemblyReference.cache

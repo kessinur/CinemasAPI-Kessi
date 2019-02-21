@@ -15,5 +15,6 @@ namespace Cinemas.API.BusinessLogic.Services
         bool Delete(int? Id);
         List<Regency> Get();
         Regency Get(int? Id);
+        List<Regency> GetRegency(int? Id);
     }
 }

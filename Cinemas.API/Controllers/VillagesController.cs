@@ -49,5 +49,10 @@ namespace Cinemas.API.Controllers
         {
             _villageService.Delete(id);
         }
+
+        public IEnumerable<Village> GetVillage(int RId)
+        {
+            return _villageService.GetVillage(RId);
+        }
     }
 }

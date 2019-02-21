@@ -1,5 +1,7 @@
 ﻿using Cinemas.API.DataAccess.Model;
+using Cinemas.API.DataAccess.Model.TransactionMaster;
 using Cinemas.API.DataAccess.Param;
+using Cinemas.API.DataAccess.Param.TransactionMaster;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +13,6 @@ namespace Cinemas.API.Common.Repository
     public interface IReservationRepository
     {
         bool Insert(ReservationParam reservationParam);
-        bool Update(int? Id, ReservationParam reservationParam);
         bool Delete(int? Id);
         List<Reservation> Get();
         Reservation Get(int? Id);

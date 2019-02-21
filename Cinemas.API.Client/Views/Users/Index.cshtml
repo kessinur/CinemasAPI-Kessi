@@ -36,6 +36,12 @@
                     Address
                 </th>
                 <th>
+                    Secret Question
+                </th>
+                <th>
+                    Secret Answer
+                </th>
+                <th>
                     Religion Name
                 </th>
                 <th>
@@ -64,12 +70,12 @@
                     </div>
                     <div class="form-group">
                         <label for="FirstName">First Name</label>
-                        <input type="text" class="form-control" id="FirstName" placeholder="FirstName" />
+                        <input type="text" class="form-control" id="FirstName" placeholder="First Name" />
                         <span class="error">Valid First Name Required</span>
                     </div>
                     <div class="form-group">
                         <label for="LastName">Last Name</label>
-                        <input type="text" class="form-control" id="LastName" placeholder="LastName" />
+                        <input type="text" class="form-control" id="LastName" placeholder="Last Name" />
                         <span class="error">Valid Last Name Required</span>
                     </div>
                     <div class="form-group">
@@ -102,8 +108,9 @@
                     </div>
                     <div class="form-group">
                         <label for="Password">Password</label>
-                        <input type="text" class="form-control" id="Password" placeholder="Password" />
+                        <input type="password" class="form-control" id="Password" placeholder="Password" />
                         <span class="error">Valid Password Required</span>
+                        <input type="checkbox" onclick="ShowPass()"> Show Password
                     </div>
                     <div class="form-group">
                         <label for="Address">Address</label>
@@ -111,9 +118,38 @@
                         <span class="error">Valid Address Required</span>
                     </div>
                     <div class="form-group">
+                        <label for="SecretQuestion">Secret Question</label>
+                        <select id="SecretQuestion" data-placement="Choose" class="form-control">
+                            <option>What was the name of your first stuffed animal?</option>
+                            <option>What was your childhood nickname?</option>
+                            <option>What is the name of your favorite childhood friend?</option>
+                        </select>
+                        <span class="error">Valid Secret Question Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="SecretAnswer">Secret Answer</label>
+                        <input type="text" class="form-control" id="SecretAnswer" placeholder="Secret Answer" />
+                        <span class="error">Valid Secret Answer Required</span>
+                    </div>
+                    <div class="form-group">
                         <label for="Religions">Religion Name</label>
                         <select id="Religions" data-placement="Choose" class="form-control"></select>
                         <span class="error">Valid Religion Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Provinces">Province Name</label>
+                        <select id="Provinces" data-placement="Choose" class="form-control" onchange="LoadRegencyCombo();"></select>
+                        <span class="error">Valid Province Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Regencies">Regency Name</label>
+                        <select id="Regencies" data-placement="Choose" class="form-control" onchange="LoadSubDistrictCombo();"></select>
+                        <span class="error">Valid Rengency Required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="SubDistricts">Sub District Name</label>
+                        <select id="SubDistricts" data-placement="Choose" class="form-control" onchange="LoadVillageCombo();"></select>
+                        <span class="error">Valid Sub District Required</span>
                     </div>
                     <div class="form-group">
                         <label for="Villages">Village Name</label>

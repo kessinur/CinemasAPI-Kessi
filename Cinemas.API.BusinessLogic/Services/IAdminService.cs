@@ -15,5 +15,6 @@ namespace Cinemas.API.BusinessLogic.Services
         bool Delete(int? Id);
         List<Admin> Get();
         Admin Get(int? Id);
+        Admin Login(string username, string password);
     }
 }

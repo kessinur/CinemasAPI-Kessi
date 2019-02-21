@@ -41,6 +41,11 @@ namespace Cinemas.API.Common.Repository.Master
             return getRegency;
         }
 
+        public List<Regency> GetRegency(int? Id)
+        {
+            return myContext.Regencies.Where(x => x.Provinces.Id == Id && x.IsDelete == false).ToList();
+        }
+
         public bool Insert(RegencyParam regencyParam)
         {
             var result = 0;

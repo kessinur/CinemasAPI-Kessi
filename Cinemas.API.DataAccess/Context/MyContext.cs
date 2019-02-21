@@ -1,4 +1,6 @@
 ﻿using Cinemas.API.DataAccess.Model;
+using Cinemas.API.DataAccess.Model.TransactionMaster;
+using Cinemas.API.DataAccess.Model.Transactions;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -11,6 +13,7 @@ namespace Cinemas.API.DataAccess.Context
     public class MyContext : DbContext
     {
         public MyContext() : base("MyContext") { }
+        //Master
         public DbSet<Regency> Regencies { get; set; }
         public DbSet<Province> Provinces { get; set; }
         public DbSet<SubDistrict> SubDistricts { get; set; }
@@ -27,5 +30,9 @@ namespace Cinemas.API.DataAccess.Context
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Film> Films { get; set; }
         public DbSet<Admin> Admin { get; set; }
+
+        //Transactions
+        public DbSet<OrderProduct> OrderProducts { get; set; }
+        public DbSet<BuyTicket> BuyTickets { get; set; }
     }
 }

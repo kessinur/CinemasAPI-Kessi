@@ -49,5 +49,15 @@ namespace Cinemas.API.Controllers
         {
             _productService.Delete(id);
         }
+
+        public IEnumerable<Product> GetProduct(int RId)
+        {
+            return _productService.GetProduct(RId);
+        }
+
+        public IEnumerable<Product> GetProductByRestaurant(int RId)
+        {
+            return _productService.GetProductByRestaurant(RId);
+        }
     }
 }

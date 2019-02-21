@@ -50,5 +50,10 @@ namespace Cinemas.API.BusinessLogic.Services.Master
             _villageRepository.Update(Id, villageParam);
             return status = true;
         }
+
+        public List<Village> GetVillage(int? Id)
+        {
+            return _villageRepository.GetVillage(Id);
+        }
     }
 }

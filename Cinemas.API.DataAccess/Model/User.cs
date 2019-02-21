@@ -18,6 +18,8 @@ namespace Cinemas.API.DataAccess.Model
         public string Username { get; set; }
         public string Password { get; set; }
         public string Address { get; set; }
+        public string SecretQuestion { get; set; }
+        public string SecretAnswer {get; set;}
         public virtual Village Villages { get; set; }
         public virtual Religion Religions { get; set; }
     }

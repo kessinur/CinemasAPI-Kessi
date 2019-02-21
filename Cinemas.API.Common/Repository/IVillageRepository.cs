@@ -15,5 +15,6 @@ namespace Cinemas.API.Common.Repository
         bool Delete(int? Id);
         List<Village> Get();
         Village Get(int? Id);
+        List<Village> GetVillage(int? Id);
     }
 }

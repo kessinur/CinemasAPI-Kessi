@@ -256,11 +256,13 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminsController.cs" />
+    <Compile Include="Controllers\BuyTicketsController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\CinemasController.cs" />
     <Compile Include="Controllers\FilmRoomsController.cs" />
     <Compile Include="Controllers\FilmsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderProductsController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\ProvincesController.cs" />
     <Compile Include="Controllers\RegenciesController.cs" />

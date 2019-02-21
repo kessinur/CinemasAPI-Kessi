@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     LoadIndexUser();
-    LoadVillageCombo();
+    LoadProvinceCombo();
     LoadReligionCombo();
     hiddenUserAlert();
     $('#table').DataTable({
@@ -29,6 +29,8 @@ function LoadIndexUser() {
                 html += '<td>' + val.Username + '</td>';
                 html += '<td>' + val.Password + '</td>';
                 html += '<td>' + val.Address + '</td>';
+                html += '<td>' + val.SecretQuestion + '</td>';
+                html += '<td>' + val.SecretAnswer + '</td>';
                 html += '<td>' + val.Religions.Name + '</td>';
                 html += '<td>' + val.Villages.Name + '</td>';
                 html += '<td> <a href="#" onclick="return GetById(' + val.Id + ');">Edit</a> ';
@@ -41,9 +43,58 @@ function LoadIndexUser() {
     });
 }
 
+function LoadProvinceCombo() {
+    $.ajax({
+        url: 'http://localhost:17940/api/Provinces',
+        type: 'GET',
+        dataType: 'json',
+        success: function (result) {
+            var province = $('#Provinces');
+            province.empty();
+            province.append($('<option/>').val('0').text('Select'));
+            $.each(result, function (i, Province) {
+                $("<option></option>").val(Province.Id).text(Province.Name).appendTo(province);
+            });
+        }
+    });
+}
+
+function LoadRegencyCombo() {
+    $.ajax({
+        url: 'http://localhost:17940/api/Regencies/GetRegency/' + $('#Provinces').val(),
+        type: 'GET',
+        dataType: 'json',
+        success: function (result) {
+            var regency = $('#Regencies');
+            regency.empty();
+            regency.append($('<option/>').val('0').text('Select'));
+            $.each(result, function (i, Regency) {
+                $("<option></option>").val(Regency.Id).text(Regency.Name).appendTo(regency);
+            });
+        }
+    });
+}
+
+function LoadSubDistrictCombo() {
+    debugger;
+    $.ajax({
+        url: 'http://localhost:17940/api/SubDistricts/GetSubDistrict/' + $('#Regencies').val(),
+        type: 'GET',
+        dataType: 'json',
+        success: function (result) {
+            var subdistrict = $('#SubDistricts');
+            subdistrict.empty();
+            subdistrict.append($('<option/>').val('0').text('Select'));
+            $.each(result, function (i, Subdistrict) {
+                $("<option></option>").val(Subdistrict.Id).text(Subdistrict.Name).appendTo(subdistrict);
+            });
+        }
+    });
+}
+
 function LoadVillageCombo() {
     $.ajax({
-        url: 'http://localhost:17940/api/Villages',
+        url: 'http://localhost:17940/api/Villages/GetVillage/' + $('#SubDistricts').val(),
         type: 'GET',
         dataType: 'json',
         success: function (result) {
@@ -73,6 +124,54 @@ function LoadReligionCombo() {
     });
 }
 
+function LoadAllRegencyCombo() {
+    $.ajax({
+        url: 'http://localhost:17940/api/Regencies',
+        type: 'GET',
+        dataType: 'json',
+        success: function (result) {
+            var regency = $('#Regencies');
+            regency.empty();
+            regency.append($('<option/>').val('0').text('Select'));
+            $.each(result, function (i, Regency) {
+                $("<option></option>").val(Regency.Id).text(Regency.Name).appendTo(regency);
+            });
+        }
+    });
+}
+
+function LoadAllSubDistrictCombo() {
+    $.ajax({
+        url: 'http://localhost:17940/api/SubDistricts',
+        type: 'GET',
+        dataType: 'json',
+        success: function (result) {
+            var subdistrict = $('#SubDistricts');
+            subdistrict.empty();
+            subdistrict.append($('<option/>').val('0').text('Select'));
+            $.each(result, function (i, Subdistrict) {
+                $("<option></option>").val(Subdistrict.Id).text(Subdistrict.Name).appendTo(subdistrict);
+            });
+        }
+    });
+}
+
+function LoadAllVillageCombo() {
+    $.ajax({
+        url: 'http://localhost:17940/api/Villages/',
+        type: 'GET',
+        dataType: 'json',
+        success: function (result) {
+            var village = $('#Villages');
+            village.empty();
+            village.append($('<option/>').val('0').text('Select'));
+            $.each(result, function (i, Village) {
+                $("<option></option>").val(Village.Id).text(Village.Name).appendTo(village);
+            });
+        }
+    });
+}
+
 function Save() {
     var user = new Object();
     user.FirstName = $('#FirstName').val();
@@ -84,6 +183,8 @@ function Save() {
     user.Username = $('#Username').val();
     user.Password = $('#Password').val();
     user.Address = $('#Address').val();
+    user.SecretQuestion = $('#SecretQuestion').val();
+    user.SecretAnswer = $('#SecretAnswer').val();
     user.Religions_Id = $('#Religions').val();
     user.Villages_Id = $('#Villages').val();
     $.ajax({
@@ -153,8 +254,13 @@ function GetById(Id) {
             $('#Username').val(result.Username);
             $('#Password').val(result.Password);
             $('#Address').val(result.Address);
+            $('#SecretQuestion').val(result.SecretQuestion);
+            $('#SecretAnswer').val(result.SecretAnswer);
             $('#Religions').val(result.Religions_Id);
-            $('#Villages').val(result.Villages_Id);
+            LoadProvinceCombo();
+            LoadRegencyCombo();
+            LoadAllSubDistrictCombo();
+            LoadVillageCombo();
 
             $('#myModal').modal('show');
             $('#Save').hide();
@@ -175,6 +281,8 @@ function Edit() {
     user.Username = $('#Username').val();
     user.Password = $('#Password').val();
     user.Address = $('#Address').val();
+    user.SecretQuestion = $('#SecretQuestion').val();
+    user.SecretAnswer = $('#SecretAnswer').val();
     user.Religions_Id = $('#Religions').val();
     user.Villages_Id = $('#Villages').val();
     $.ajax({
@@ -199,6 +307,8 @@ function Edit() {
                 $('#Username').val('');
                 $('#Password').val('');
                 $('#Address').val('');
+                $('#SecretQuestion').val('');
+                $('#SecretAnswer').val('');
             });
         },
         error: function (response) {
@@ -279,6 +389,41 @@ function validateInsertUser() {
     else {
         $('#Religions').siblings('span.error').css('visibility', 'hidden');
     }
+    if ($('#SecretQuestion').val() == 0 || $('#SecretQuestion').val() == "0") {
+        allValid = false;
+        $('#SecretQuestion').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#SecretQuestion').siblings('span.error').css('visibility', 'hidden');
+    }
+    if ($('#SecretAnswer').val() == 0 || $('#SecretAnswer').val() == "0") {
+        allValid = false;
+        $('#SecretAnswer').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#SecretAnswer').siblings('span.error').css('visibility', 'hidden');
+    }
+    if ($('#Provinces').val() == 0 || $('#Provinces').val() == "0") {
+        allValid = false;
+        $('#Provinces').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#Provinces').siblings('span.error').css('visibility', 'hidden');
+    }
+    if ($('#Regencies').val() == 0 || $('#Regencies').val() == "0") {
+        allValid = false;
+        $('#Regencies').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#Regencies').siblings('span.error').css('visibility', 'hidden');
+    }
+    if ($('#SubDistricts').val() == 0 || $('#SubDistricts').val() == "0") {
+        allValid = false;
+        $('#SubDistricts').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#SubDistricts').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#Villages').val() == 0 || $('#Villages').val() == "0") {
         allValid = false;
         $('#Villages').siblings('span.error').css('visibility', 'visible');
@@ -357,12 +502,47 @@ function validateEditUser() {
     else {
         $('#Address').siblings('span.error').css('visibility', 'hidden');
     }
+    if ($('#SecretQuestion').val() == 0 || $('#SecretQuestion').val() == "0") {
+        allValid = false;
+        $('#SecretQuestion').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#SecretQuestion').siblings('span.error').css('visibility', 'hidden');
+    }
+    if ($('#SecretAnswer').val() == 0 || $('#SecretAnswer').val() == "0") {
+        allValid = false;
+        $('#SecretAnswer').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#SecretAnswer').siblings('span.error').css('visibility', 'hidden');
+    }
     if ($('#Religions').val() == 0 || $('#Religions').val() == "0") {
         allValid = false;
         $('#Religions').siblings('span.error').css('visibility', 'visible');
     }
     else {
         $('#Religions').siblings('span.error').css('visibility', 'hidden');
+    }
+    if ($('#Provinces').val() == 0 || $('#Provinces').val() == "0") {
+        allValid = false;
+        $('#Provinces').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#Provinces').siblings('span.error').css('visibility', 'hidden');
+    }
+    if ($('#Regencies').val() == 0 || $('#Regencies').val() == "0") {
+        allValid = false;
+        $('#Regencies').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#Regencies').siblings('span.error').css('visibility', 'hidden');
+    }
+    if ($('#SubDistricts').val() == 0 || $('#SubDistricts').val() == "0") {
+        allValid = false;
+        $('#SubDistricts').siblings('span.error').css('visibility', 'visible');
+    }
+    else {
+        $('#SubDistricts').siblings('span.error').css('visibility', 'hidden');
     }
     if ($('#Villages').val() == 0 || $('#Villages').val() == "0") {
         allValid = false;
@@ -388,6 +568,11 @@ function hiddenUserAlert() {
     $('#Password').siblings('span.error').css('visibility', 'hidden');
     $('#Address').siblings('span.error').css('visibility', 'hidden');
     $('#Religions').siblings('span.error').css('visibility', 'hidden');
+    $('#SecretQuestion').siblings('span.error').css('visibility', 'hidden');
+    $('#SecretAnswer').siblings('span.error').css('visibility', 'hidden');
+    $('#Provinces').siblings('span.error').css('visibility', 'hidden');
+    $('#Regencies').siblings('span.error').css('visibility', 'hidden');
+    $('#SubDistricts').siblings('span.error').css('visibility', 'hidden');
     $('#Villages').siblings('span.error').css('visibility', 'hidden');
 }
 
@@ -402,7 +587,16 @@ function clearUserScreen() {
     $('#Username').val('');
     $('#Password').val('');
     $('#Address').val('');
+    $('#SecretQuestion').val('');
+    $('#SecretAnswer').val('');
     $('#Religions').val(0);
+    $('#Provinces').val(0);
+    $('#Regencies').val(0);
+    $('#SubDistrics').val(0);
     $('#Villages').val(0);
     hiddenUserAlert();
+}
+
+function ShowPass() {
+    $('#Password').val();
 }

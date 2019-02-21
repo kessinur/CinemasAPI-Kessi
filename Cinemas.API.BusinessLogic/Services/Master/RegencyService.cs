@@ -50,5 +50,10 @@ namespace Cinemas.API.BusinessLogic.Services.Master
             _regencyRepository.Update(Id, regencyParam);
             return status = true;
         }
+
+        public List<Regency> GetRegency(int? Id)
+        {
+            return _regencyRepository.GetRegency(Id);
+        }
     }
 }

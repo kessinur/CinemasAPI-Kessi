@@ -50,5 +50,10 @@ namespace Cinemas.API.BusinessLogic.Services.Master
             _subdistrictRepository.Update(Id, subdistrictParam);
             return status = true;
         }
+
+        public List<SubDistrict> GetSubDistrict(int? Id)
+        {
+            return _subdistrictRepository.GetSubDistrict(Id);
+        }
     }
 }
